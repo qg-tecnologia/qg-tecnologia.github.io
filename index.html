@@ -4,8 +4,197 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QG Tecnologia</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!-- favicon -->
+    <link rel="icon" href="assets/img/favicon.png">
+    <script src="js/js.js"></script>
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
+    <style>
+        .loadingFont{
+            color: #fff;
+            font-size: 3rem;
+        }
+        .flex{
+            display: flex !important;
+        }
+        #loading{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(22, 29, 22, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            filter: blur();
+        }
+        #loading .loadingContainer{
+            position: relative;
+        }
+        #loading .logo{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            font-size: 3rem;
+            transform: translate(-50%, -50%);
+        }
+        #loading .hexagram {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #loading .hexagram .hexa::before{
+            content: "";
+            display: flex;
+            width: 10px;
+            height: 5px;
+            background: rgba(22, 29, 22);
+            transform: rotate(45deg);
+            position: absolute;
+            left: -5px;
+        }
+        #loading .hexagram .hexa::after{
+            content: "";
+            display: flex;
+            width: 5px;
+            height: 10px;
+            background: rgba(22, 29, 22);
+            transform: rotate(45deg);
+            position: absolute;
+            left: calc(100% - 5px);
+        }
+        #loading .hexagram .hexa-1{
+            position: absolute;
+            content: "";
+            width: 50px;
+            height: 5px;
+            top: 0;
+            z-index: 1;
+            left: 50%;
+            transform: translate(-50%, 0);
+            background-color: #fff;
+            display: none;
+            transition: display 1s ease-in;
+        }
+        #loading .hexagram .hexa-2{
+            position: absolute;
+            content: "";
+            z-index: 2;
+            width: 50px;
+            height: 5px;
+            top: 22.5px;
+            left: calc(50% + 15px);
+            transform: rotate(60deg);
+            background-color: #fff;
+            display: none;
+            transition: display 1s ease-in;
+        }
+        #loading .hexagram .hexa-3{
+            position: absolute;
+            content: "";
+            width: 50px;
+            z-index: 3;
+            height: 5px;
+            top: 65px;
+            left: calc(50% + 15px);
+            transform: rotate(120deg);
+            background-color: #fff;
+            display: none;
+            transition: display 1s ease-in;
+        }
+        #loading .hexagram .hexa-4{
+            position: absolute;
+            content: "";
+            width: 50px;
+            z-index: 4;
+            height: 5px;
+            top: 87.5px;
+            left: 50%;
+            transform: translate(-50%, 0) rotate(180deg);
+            background-color: #fff;
+            display: none;
+            transition: display 1s ease-in;
+        }
+        #loading .hexagram .hexa-5{
+            position: absolute;
+            content: "";
+            z-index: 5;
+            width: 50px;
+            height: 5px;
+            top: 65px;
+            left: -15px;
+            transform: rotate(240deg);
+            background-color: #fff;
+            display: none;
+            transition: display 1s ease-in;
+        }
+
+        #loading .hexagram .hexa-6{
+            position: absolute;
+            content: "";
+            z-index: 6;
+            width: 50px;
+            height: 5px;
+            top: 22.5px;
+            left: -15px;
+            transform: rotate(300deg);
+            background-color: #fff;
+            display: none;
+            transition: display 1s ease-in;
+        }
+    </style>
 </head>
 <body>
-    
+    <header>
+        <div class="center-vh blackOpsOne">
+            <img src="assets/img/logo.png" class="logo">
+            <span>Tecnologia</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Serviços</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="first" style="display: flex; justify-content: space-between; align-items: center;">
+            <div class="center-vh" style="flex-direction: column; width: 100%;">
+                <h1 class="blackOpsOne" style="margin: 0;">QG Tecnologia</h1>
+                <p>Desenvolvemos soluções tecnológicas para o seu negócio.</p>
+                <!-- <a href="#aboutUs" class="btn-rounded" style="margin-top: 20px;">Saiba mais</a> -->
+            </div>
+            <!-- <img src="assets/img/pessoas_batendo_continencia.png" width="500"> -->
+        </div>
+        <div id="second">
+            oi
+        </div>
+    </main>
+    <footer></footer>
+    <div id="loading" style="justify-content: center; flex-direction: column; align-items: center; gap: 20px;">
+        <div class="loadingContainer">
+            <span class="blackOpsOne loadingFont logo">QG</span>
+            <div class="hexagram">
+                <div class="hexa hexa-1"></div>
+                <div class="hexa hexa-2"></div>
+                <div class="hexa hexa-3"></div>
+                <div class="hexa hexa-4"></div>
+                <div class="hexa hexa-5"></div>
+                <div class="hexa hexa-6"></div>
+            </div>
+        </div>
+        <span style="color: white;">Em construção</span>
+    </div>
 </body>
 </html>
